@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#humedad-data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.humedad-item {
+    background-color: #f0f8ff;
+    border: 2px solid #00796b;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.humedad-item p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.new-data-alert {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none; /* Inicialmente oculta */
+    z-index: 1000;
+}
+
+#new-data-alert {
+    position: sticky; /* Permite que el elemento se quede "pegado" en la parte superior */
+    top: 0; /* Siempre en la parte superior del contenedor */
+    z-index: 1000; /* Asegura que quede encima de otros elementos */
+    color: green;
+    padding: 10px;
+    background-color: #eaf7e6;
+    text-align: center;
+    border-bottom: 1px solid #00796b;
+    font-weight: bold;
+}
+
+
+#humedad-data {
+    display: flex;
+    flex-direction: column-reverse; /* Invertir el flujo para que lo nuevo esté arriba */
+    gap: 15px;
+}
+
+
+/* Contenedor de los datos con scroll */
+.humedad-container {
+    max-height: 400px;  /* Altura máxima del contenedor */
+    overflow-y: auto;   /* Desplazamiento vertical */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column-reverse;  /* Los nuevos elementos se agregan al principio */
+}
+
+/* Estilo de cada item de humedad */
+.humedad-item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la alerta de nuevos datos */
+.new-data-alert {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;  /* Inicialmente oculta */
+    z-index: 1000;
+}
+
+
+
+.humedad-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.humedad-time {
+    font-size: 14px;
+    color: #777;
+}
